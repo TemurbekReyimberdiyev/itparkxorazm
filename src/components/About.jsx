@@ -45,7 +45,9 @@ export default function About({ language, translations }) {
                 <div>
                   <h4 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-1">{t.labelAddress}</h4>
                   <p className="text-base text-slate-800 leading-relaxed">
-                    Xorazm viloyati, Urganch shahri, Tinchlik ko'chasi, 6-uy
+                    {language === 'uz' 
+                      ? "Xorazm viloyati, Urganch shahri, Pahlavon Mahmud ko'chasi, 6-uy" 
+                      : "Хорезмская область, город Ургенч, улица Пахлавана Махмуда, дом 6"}
                   </p>
                 </div>
               </div>
@@ -119,10 +121,10 @@ export default function About({ language, translations }) {
           <div className="lg:col-span-7">
             <div className="relative w-full h-[400px] bg-slate-100 border border-slate-200 rounded-3xl overflow-hidden shadow-xl">
               
-              {/* Google Maps Embed pointing directly to Tinchlik 6, Urgench */}
+              {/* Google Maps Embed pointing directly to Pahlavon Mahmud 6, Urgench */}
               <iframe
                 title="IT Park Urgench Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.447545934571!2d60.62776891157152!3d41.55953047115822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc95786a51d8b%3A0xe54ad40cf124d9c7!2zVGluY2hsaWsgS28nJ2NoYXNpIDYsIFVyZ2VuY2gsIFV6YmVraXN0YW4!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                src="https://maps.google.com/maps?q=41.558419,60.621838&z=18&t=m&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

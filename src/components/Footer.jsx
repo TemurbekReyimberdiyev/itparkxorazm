@@ -99,7 +99,11 @@ export default function Footer({ language, translations }) {
             <ul className="space-y-3.5 text-sm text-slate-600">
               <li className="flex items-start space-x-2.5">
                 <MapPin className="w-4 h-4 text-itpark-dark shrink-0 mt-0.5" />
-                <span className="leading-relaxed text-slate-600">Xorazm viloyati, Urganch shahri, Tinchlik ko'chasi, 6-uy</span>
+                <span className="leading-relaxed text-slate-600">
+                  {language === 'uz' 
+                    ? "Xorazm viloyati, Urganch shahri, Pahlavon Mahmud ko'chasi, 6-uy" 
+                    : "Хорезмская область, город Ургенч, улица Пахлавана Махмуда, дом 6"}
+                </span>
               </li>
               <li className="flex items-center space-x-2.5">
                 <Phone className="w-4 h-4 text-itpark-dark shrink-0" />
