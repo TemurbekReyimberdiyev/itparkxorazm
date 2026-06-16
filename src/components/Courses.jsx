@@ -441,6 +441,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'foreign_languages',
       category: 'languages',
       icon: <Globe className="w-6 h-6 text-current" />,
+      image: '/images/foreign_languages.jpg',
       titleUz: 'Chet tillari',
       titleRu: 'Иностранные языки',
       durationUz: '3 oy',
