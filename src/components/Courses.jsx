@@ -16,6 +16,7 @@ import {
 
 export default function Courses({ language, onSelectCourse, translations }) {
   const [activeTab, setActiveTab] = useState('all');
+  const [showAll, setShowAll] = useState(false);
   
   const t = translations[language].courses;
 
@@ -864,6 +865,8 @@ export default function Courses({ language, onSelectCourse, translations }) {
     ? coursesData 
     : coursesData.filter(c => c.category === activeTab || (activeTab === 'languages' && c.category === 'basic'));
 
+  const visibleCourses = showAll ? filteredCourses : filteredCourses.slice(0, 3);
+
   return (
     <section id="courses" className="py-20 bg-slate-50 relative border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -883,7 +886,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
           {filterTabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => { setActiveTab(tab.id); setShowAll(false); }}
               className={`px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-200 border ${
                 activeTab === tab.id
                   ? 'bg-itpark border-itpark text-slate-950 shadow-md shadow-itpark/10'
@@ -897,7 +900,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCourses.map((course) => (
+          {visibleCourses.map((course) => (
             <div
               key={course.id}
               className={`glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 transition-all duration-300 ${getCategoryStyles(course.category)}`}
@@ -948,6 +951,18 @@ export default function Courses({ language, onSelectCourse, translations }) {
             </div>
           ))}
         </div>
+
+        {/* Show All Button */}
+        {filteredCourses.length > 3 && !showAll && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="bg-itpark hover:bg-itpark-dark text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-itpark/10 hover:shadow-itpark/30 transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+            >
+              {language === 'uz' ? "Barcha kurslarni ko'rish" : 'Показать все курсы'}
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
