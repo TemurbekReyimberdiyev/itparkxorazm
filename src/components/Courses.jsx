@@ -25,7 +25,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'comp_lit',
       category: 'basic',
       icon: <Laptop className="w-6 h-6 text-current" />,
-      image: '/images/comp_lit.jpg',
+      image: '/images/comp_lit.png',
       titleUz: 'Kompyuter Savodxonligi',
       titleRu: 'Компьютерная грамотность',
       durationUz: '2 oy',
