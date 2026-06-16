@@ -88,6 +88,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'frontend',
       category: 'dev',
       icon: <Code className="w-6 h-6 text-current" />,
+      image: '/images/frontend.png',
       titleUz: 'Frontend dasturlash',
       titleRu: 'Frontend разработка',
       durationUz: '6 oy',
