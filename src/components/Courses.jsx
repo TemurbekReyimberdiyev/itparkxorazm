@@ -409,6 +409,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: '3d',
       category: 'media',
       icon: <Palette className="w-6 h-6 text-current" />,
+      image: '/images/3d_modeling.png',
       titleUz: '3D modelash',
       titleRu: '3D моделирование',
       durationUz: '3 oy',
