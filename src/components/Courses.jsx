@@ -119,6 +119,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'backend',
       category: 'dev',
       icon: <Database className="w-6 h-6 text-current" />,
+      image: '/images/backend.png',
       titleUz: 'Backend dasturlash',
       titleRu: 'Backend разработка',
       durationUz: '6 oy',
