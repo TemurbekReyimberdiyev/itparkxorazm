@@ -63,7 +63,7 @@ export default function ContactForm({ language, selectedCourse, translations }) 
     formData.append('message', message);
     formData.append('timestamp', new Date().toLocaleString());
 
-    fetch('https://script.google.com/macros/s/AKfycbymq0dtVJi6ou8O9bvpaSspksK6lnWwbLpdY_OXj388fJ265GPp3okB3Un5os8cHxPHDA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwW4zjnoHcailw41QjESHvG22CXNREbe26sfNCpEICAuEVen0hU4iJX_MGSu7JjT9CqKw/exec', {
       method: 'POST',
       mode: 'no-cors',
       headers: {
