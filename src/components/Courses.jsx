@@ -184,6 +184,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'mobilography',
       category: 'media',
       icon: <Camera className="w-6 h-6 text-current" />,
+      image: '/images/mobilography.png',
       titleUz: 'Mobilografiya',
       titleRu: 'Мобилография',
       durationUz: '2 oy',
