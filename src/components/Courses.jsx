@@ -248,6 +248,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'it_math',
       category: 'languages',
       icon: <PlusCircle className="w-6 h-6 text-current" />,
+      image: '/images/it_math.png',
       titleUz: 'IT Matematika',
       titleRu: 'IT Математика',
       durationUz: '6 oy',
