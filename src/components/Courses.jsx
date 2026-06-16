@@ -377,6 +377,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'robototexnika',
       category: 'dev',
       icon: <Award className="w-6 h-6 text-current" />,
+      image: '/images/robototexnika.png',
       titleUz: 'Robototexnika',
       titleRu: 'Робототехника',
       durationUz: '3 oy',
