@@ -865,7 +865,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
     ? coursesData 
     : coursesData.filter(c => c.category === activeTab || (activeTab === 'languages' && c.category === 'basic'));
 
-  const visibleCourses = showAll ? filteredCourses : filteredCourses.slice(0, 3);
+  const visibleCourses = showAll ? filteredCourses : filteredCourses.slice(0, 6);
 
   return (
     <section id="courses" className="py-20 bg-slate-50 relative border-y border-slate-200">
@@ -953,7 +953,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
         </div>
 
         {/* Show All Button */}
-        {filteredCourses.length > 3 && !showAll && (
+        {filteredCourses.length > 6 && !showAll && (
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(true)}
