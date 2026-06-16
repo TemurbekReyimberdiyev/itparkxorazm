@@ -82,50 +82,6 @@ export default function Mentors({ language, translations }) {
       experienceUz: '5+ yil tajriba',
       experienceRu: 'Опыт 5+ лет',
       avatarColor: 'from-blue-500 to-indigo-600'
-    },
-    {
-      name: 'Arslan Koptleulov',
-      roleUz: 'Lead UI/UX Designer & Product Expert',
-      roleRu: 'Lead UI/UX дизайнер и продуктовый эксперт',
-      bioUz: 'Figma, foydalanuvchi interfeyslari dizayni, prototiplash va mobil dizayn bo\'yicha 4 yildan ortiq tajribaga ega yetakchi mutaxassis.',
-      bioRu: 'Ведущий специалист с более чем 4-летним опытом работы в области Figma, дизайна интерфейсов, прототипирования и мобильного дизайна.',
-      skills: ['Figma', 'UI Design', 'UX Research', 'Prototyping', 'Mobile Design'],
-      experienceUz: '4+ yil tajriba',
-      experienceRu: 'Опыт 4+ года',
-      avatarColor: 'from-pink-500 to-rose-500'
-    },
-    {
-      name: 'Suxrob Xaydarov',
-      roleUz: 'Senior Fullstack Developer',
-      roleRu: 'Senior Fullstack разработчик',
-      bioUz: 'Veb va dasturiy ta\'minot arxitekturasi, Node.js, React hamda korporativ tizimlar yaratish bo\'yicha ko\'p yillik amaliy tajribaga ega mentor.',
-      bioRu: 'Ментор с многолетним практическим опытом веб-разработки, построения архитектур на Node.js, React и создания корпоративных систем.',
-      skills: ['React', 'Node.js', 'PostgreSQL', 'C#', 'Web Architecture'],
-      experienceUz: '5+ yil tajriba',
-      experienceRu: 'Опыт 5+ лет',
-      avatarColor: 'from-cyan-600 to-blue-500'
-    },
-    {
-      name: 'Xasan Djuraev',
-      roleUz: 'Middle Frontend Web Developer',
-      roleRu: 'Middle Frontend веб-разработчик',
-      bioUz: 'React, TypeScript va Next.js yordamida interaktiv, yuqori sifatli va tezkor veb-ilovalarni ishlab chiqish hamda optimallashtirish bo\'yicha usta.',
-      bioRu: 'Мастер разработки и оптимизации интерактивных, качественных веб-приложений с использованием React, TypeScript и Next.js.',
-      skills: ['React', 'TypeScript', 'Next.js', 'Redux', 'Web Performance'],
-      experienceUz: '3+ yil tajriba',
-      experienceRu: 'Опыт 3+ года',
-      avatarColor: 'from-teal-500 to-emerald-500'
-    },
-    {
-      name: 'Shahzodbek Ibodullayev',
-      roleUz: 'Cybersecurity Expert & Ethical Hacker',
-      roleRu: 'Эксперт по кибербезопасности и этичный хакер',
-      bioUz: 'Tizim xavfsizligi, kiberhujumlarni aniqlash, tarmoqlarni himoyalash va etik xaking bo\'yicha katta tajribaga ega amaliyotchi mutaxassis.',
-      bioRu: 'Практикующий специалист с большим опытом системной безопасности, обнаружения киберугроз, защиты сетей и этичного хакинга.',
-      skills: ['Ethical Hacking', 'Linux', 'Network Security', 'Wireshark', 'Python'],
-      experienceUz: '4+ yil tajriba',
-      experienceRu: 'Опыт 4+ года',
-      avatarColor: 'from-red-600 to-rose-500'
     }
   ];
 

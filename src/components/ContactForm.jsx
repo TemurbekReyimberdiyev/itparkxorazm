@@ -34,8 +34,7 @@ export default function ContactForm({ language, selectedCourse, translations }) 
     { id: 'robototexnika', uz: 'Robototexnika', ru: 'Робототехника' },
     { id: '3d', uz: '3D modelash', ru: '3D моделирование' },
     { id: 'foreign_languages', uz: 'Chet tillari', ru: 'Иностранные языки' },
-    { id: 'smm', uz: 'SMM va Targetologiya', ru: 'SMM и Таргетинг' },
-    { id: 'cybersecurity', uz: 'Kiberxavfsizlik asoslari', ru: 'Основы кибербезопасности' }
+    { id: 'smm', uz: 'SMM va Targetologiya', ru: 'SMM и Таргетинг' }
   ];
 
   const handleSubmit = (e) => {

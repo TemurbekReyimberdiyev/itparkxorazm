@@ -485,37 +485,6 @@ export default function Courses({ language, onSelectCourse, translations }) {
         'Facebook Ads Manager и настройки таргетированной рекламы',
         'Анализ рекламы (Analytics) и оптимизация результатов'
       ]
-    },
-    {
-      id: 'cybersecurity',
-      category: 'dev',
-      icon: <Award className="w-6 h-6 text-current" />,
-      titleUz: 'Kiberxavfsizlik asoslari',
-      titleRu: 'Основы кибербезопасности',
-      durationUz: '4 oy',
-      durationRu: '4 месяца',
-      intensityUz: 'Haftada 3 marta, 2 soatdan',
-      intensityRu: '3 раза в неделю по 2 часа',
-      descUz: 'Axborot tizimlarini himoya qilish, tarmoq xavfsizligi va kiberhujumlarni aniqlash hamda bartaraf etish ko\'nikmalari.',
-      descRu: 'Защита информационных систем, безопасность сетей, выявление и устранение киберугроз.',
-      stack: ['Linux', 'Networking', 'Ethical Hacking', 'Cryptography', 'Wireshark'],
-      programs: ['git', 'linux', 'security'],
-      audienceUz: 'Tizim administratorlari, xavfsizlikka qiziquvchilar va axborot himoyachilari.',
-      audienceRu: 'Системные администраторы, разработчики и желающие освоить сферу ИБ.',
-      syllabusUz: [
-        'Kiberxavfsizlik asoslari va xavfsizlik protokollari',
-        'Linux operatsion tizimi va buyruqlar satrida ishlash',
-        'Kompyuter tarmoqlari xavfsizligi va Wireshark bilan ishlash',
-        'Etik xaking (Ethical Hacking) va tizimdagi zaifliklarni topish',
-        'Kriptografiya asoslari va ma\'lumotlarni shifrlash usullari'
-      ],
-      syllabusRu: [
-        'Основы кибербезопасности и протоколы защиты',
-        'Операционная система Linux и работа в терминале',
-        'Безопасность компьютерных сетей и анализ в Wireshark',
-        'Этичный хакинг (Ethical Hacking) и поиск уязвимостей',
-        'Основы криптографии и методы шифрования данных'
-      ]
     }
   ];
 

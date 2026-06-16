@@ -6,7 +6,7 @@ export default function Hero({ language, translations }) {
 
   const stats = [
     { icon: <BookOpen className="w-5 h-5 text-itpark-dark" />, num: "15+", label: t.statCourses },
-    { icon: <Users className="w-5 h-5 text-itpark-dark" />, num: "10+", label: t.statMentors },
+    { icon: <Users className="w-5 h-5 text-itpark-dark" />, num: "7", label: t.statMentors },
     { icon: <CheckCircle className="w-5 h-5 text-itpark-dark" />, num: "100%", label: t.statQuality },
     { icon: <Award className="w-5 h-5 text-itpark-dark" />, num: "2", label: t.statCertificates }
   ];
