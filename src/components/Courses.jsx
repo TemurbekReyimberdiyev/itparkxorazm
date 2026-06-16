@@ -152,6 +152,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'video_edit',
       category: 'media',
       icon: <Film className="w-6 h-6 text-current" />,
+      image: '/images/video_montaj.png',
       titleUz: 'Video montaj',
       titleRu: 'Видеомонтаж',
       durationUz: '3 oy',
