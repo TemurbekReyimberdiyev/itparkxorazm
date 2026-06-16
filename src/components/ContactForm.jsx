@@ -33,7 +33,9 @@ export default function ContactForm({ language, selectedCourse, translations }) 
     { id: 'comp_lit_kids', uz: 'Kompyuter savodxonligi (kids)', ru: 'Компьютерная грамотность (kids)' },
     { id: 'robototexnika', uz: 'Robototexnika', ru: 'Робототехника' },
     { id: '3d', uz: '3D modelash', ru: '3D моделирование' },
-    { id: 'foreign_languages', uz: 'Chet tillari', ru: 'Иностранные языки' }
+    { id: 'foreign_languages', uz: 'Chet tillari', ru: 'Иностранные языки' },
+    { id: 'smm', uz: 'SMM va Targetologiya', ru: 'SMM и Таргетинг' },
+    { id: 'cybersecurity', uz: 'Kiberxavfsizlik asoslari', ru: 'Основы кибербезопасности' }
   ];
 
   const handleSubmit = (e) => {

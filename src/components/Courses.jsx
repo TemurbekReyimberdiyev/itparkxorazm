@@ -453,6 +453,68 @@ export default function Courses({ language, onSelectCourse, translations }) {
         'Упражнения на аудирование и понимание речи',
         'Разговорные сессии для свободного общения'
       ]
+    },
+    {
+      id: 'smm',
+      category: 'media',
+      icon: <Layers className="w-6 h-6 text-current" />,
+      titleUz: 'SMM va Targetologiya',
+      titleRu: 'SMM и Таргетинг',
+      durationUz: '3 oy',
+      durationRu: '3 месяца',
+      intensityUz: 'Haftada 3 marta, 2 soatdan',
+      intensityRu: '3 раза в неделю по 2 часа',
+      descUz: 'Ijtimoiy tarmoqlarda brendlarni targ\'ib qilish, reklama kampaniyalarini sozlash va SMM strategiyasini yaratish.',
+      descRu: 'Продвижение брендов в социальных сетях, настройка таргетированной рекламы и создание SMM-стратегий.',
+      stack: ['Targeting', 'Content Plan', 'Copywriting', 'Budgeting', 'Analytics'],
+      programs: ['figma', 'smm', 'targeting'],
+      audienceUz: 'Brend egalari, ijtimoiy tarmoq adminlari va targetolog bo\'lishni xohlovchilar.',
+      audienceRu: 'Владельцы бизнеса, администраторы соцсетей и желающие стать таргетологами.',
+      syllabusUz: [
+        'SMM asoslari va ijtimoiy tarmoqlar algoritmlari',
+        'Kopirayting va kontent-reja (Content Plan) tuzish',
+        'Figma yordamida postlar uchun vizual dizayn yaratish',
+        'Facebook Ads Manager va targetlangan reklama sozlamalari',
+        'Reklama tahlili (Analytics) va natijalarni optimallashtirish'
+      ],
+      syllabusRu: [
+        'Основы SMM и алгоритмы социальных сетей',
+        'Копирайтинг и составление контент-плана',
+        'Создание визуального дизайна для постов в Figma',
+        'Facebook Ads Manager и настройки таргетированной рекламы',
+        'Анализ рекламы (Analytics) и оптимизация результатов'
+      ]
+    },
+    {
+      id: 'cybersecurity',
+      category: 'dev',
+      icon: <Award className="w-6 h-6 text-current" />,
+      titleUz: 'Kiberxavfsizlik asoslari',
+      titleRu: 'Основы кибербезопасности',
+      durationUz: '4 oy',
+      durationRu: '4 месяца',
+      intensityUz: 'Haftada 3 marta, 2 soatdan',
+      intensityRu: '3 раза в неделю по 2 часа',
+      descUz: 'Axborot tizimlarini himoya qilish, tarmoq xavfsizligi va kiberhujumlarni aniqlash hamda bartaraf etish ko\'nikmalari.',
+      descRu: 'Защита информационных систем, безопасность сетей, выявление и устранение киберугроз.',
+      stack: ['Linux', 'Networking', 'Ethical Hacking', 'Cryptography', 'Wireshark'],
+      programs: ['git', 'linux', 'security'],
+      audienceUz: 'Tizim administratorlari, xavfsizlikka qiziquvchilar va axborot himoyachilari.',
+      audienceRu: 'Системные администраторы, разработчики и желающие освоить сферу ИБ.',
+      syllabusUz: [
+        'Kiberxavfsizlik asoslari va xavfsizlik protokollari',
+        'Linux operatsion tizimi va buyruqlar satrida ishlash',
+        'Kompyuter tarmoqlari xavfsizligi va Wireshark bilan ishlash',
+        'Etik xaking (Ethical Hacking) va tizimdagi zaifliklarni topish',
+        'Kriptografiya asoslari va ma\'lumotlarni shifrlash usullari'
+      ],
+      syllabusRu: [
+        'Основы кибербезопасности и протоколы защиты',
+        'Операционная система Linux и работа в терминале',
+        'Безопасность компьютерных сетей и анализ в Wireshark',
+        'Этичный хакинг (Ethical Hacking) и поиск уязвимостей',
+        'Основы криптографии и методы шифрования данных'
+      ]
     }
   ];
 
@@ -731,6 +793,36 @@ export default function Courses({ language, onSelectCourse, translations }) {
         return (
           <span key={name} title="Blender 3D" className={badgeClass}>
             <span className="text-[#EA7600] font-extrabold text-[11px]">Bl</span>
+          </span>
+        );
+      case 'smm':
+        return (
+          <span key={name} title="SMM" className={badgeClass}>
+            <svg className="w-4.5 h-4.5 text-[#e4405f]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </span>
+        );
+      case 'targeting':
+        return (
+          <span key={name} title="Facebook Ads / Targeting" className={badgeClass}>
+            <svg className="w-4.5 h-4.5 text-[#0078d7]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+            </svg>
+          </span>
+        );
+      case 'linux':
+        return (
+          <span key={name} title="Linux" className={badgeClass}>
+            <span className="text-slate-800 font-extrabold text-[11px]">Lx</span>
+          </span>
+        );
+      case 'security':
+        return (
+          <span key={name} title="Cybersecurity" className={badgeClass}>
+            <svg className="w-4.5 h-4.5 text-[#d9383a]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.9v6h-2v-6h2zm0-4.9c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z" />
+            </svg>
           </span>
         );
       default:
