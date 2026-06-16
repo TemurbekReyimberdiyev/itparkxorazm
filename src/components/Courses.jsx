@@ -873,7 +873,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
               onClick={() => { setActiveTab(tab.id); setShowAll(false); }}
               className={`px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-200 border ${
                 activeTab === tab.id
-                  ? 'bg-itpark border-itpark text-slate-950 shadow-md shadow-itpark/10'
+                  ? 'bg-itpark border-itpark text-white shadow-md shadow-itpark/10'
                   : 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-350'
               }`}
             >
@@ -985,7 +985,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(true)}
-              className="bg-itpark hover:bg-itpark-dark text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-itpark/10 hover:shadow-itpark/30 transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              className="bg-itpark hover:bg-itpark-dark text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-itpark/10 hover:shadow-itpark/30 transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
             >
               {language === 'uz' ? "Barcha kurslarni ko'rish" : 'Показать все курсы'}
             </button>
