@@ -57,6 +57,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'foundation',
       category: 'dev',
       icon: <Layers className="w-6 h-6 text-current" />,
+      image: '/images/foundation.png',
       titleUz: 'Foundation',
       titleRu: 'Foundation',
       durationUz: '2 oy',
