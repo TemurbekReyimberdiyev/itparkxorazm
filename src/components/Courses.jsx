@@ -344,6 +344,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'comp_lit_kids',
       category: 'basic',
       icon: <Laptop className="w-6 h-6 text-current" />,
+      image: '/images/comp_lit.png',
       titleUz: 'Kompyuter savodxonligi (kids)',
       titleRu: 'Компьютерная грамотность (kids)',
       durationUz: '2 oy',
