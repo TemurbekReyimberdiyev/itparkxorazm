@@ -900,7 +900,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
                       </div>
 
                       {/* 3D Transparent Illustration */}
-                      <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 ml-4 transition-transform duration-500 group-hover:scale-108 group-hover:rotate-2">
+                      <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 ml-4 transition-transform duration-500 group-hover:scale-108 group-hover:rotate-2">
                         <img 
                           src={course.image} 
                           alt="" 
