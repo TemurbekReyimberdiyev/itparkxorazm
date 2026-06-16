@@ -25,7 +25,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'comp_lit',
       category: 'basic',
       icon: <Laptop className="w-6 h-6 text-current" />,
-      image: '/images/comp_lit.jpg',
+      image: '/images/comp_lit.png',
       titleUz: 'Kompyuter Savodxonligi',
       titleRu: 'Компьютерная грамотность',
       durationUz: '2 oy',
@@ -873,62 +873,93 @@ export default function Courses({ language, onSelectCourse, translations }) {
           {visibleCourses.map((course) => (
             <div
               key={course.id}
-              className={`glass-card rounded-2xl flex flex-col justify-between border-t-4 transition-all duration-300 hover:shadow-md group overflow-hidden ${getCategoryStyles(course.category)}`}
+              className={`glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 transition-all duration-300 hover:shadow-lg group ${getCategoryStyles(course.category)}`}
             >
-              {course.image && (
-                <div className="relative h-44 w-full overflow-hidden shrink-0">
-                  <img 
-                    src={course.image} 
-                    alt={language === 'uz' ? course.titleUz : course.titleRu} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                  />
-                  {/* Soft overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-black/10" />
-                </div>
-              )}
-              <div className="p-6 flex flex-col justify-between flex-grow">
-                <div>
-                  {/* Header of card */}
-                  <div className="flex items-center justify-between mb-5">
-                    <div className={`w-12 h-12 border rounded-xl flex items-center justify-center transition-all duration-350 ${getIconWrapperStyles(course.category)}`}>
-                      {course.icon}
+              <div>
+                {course.image ? (
+                  // Inline split layout for cards with a 3D illustration
+                  <div>
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1 pr-2">
+                        {/* Header of card (Icon & Duration) */}
+                        <div className="flex items-center space-x-3 mb-4">
+                          <div className={`w-10 h-10 border rounded-xl flex items-center justify-center transition-all duration-350 ${getIconWrapperStyles(course.category)}`}>
+                            {course.icon}
+                          </div>
+                          <div className="flex items-center space-x-1.5 text-xs text-slate-700 font-semibold bg-white border border-slate-200/80 px-3 py-1 rounded-full shadow-xs">
+                            <Clock className="w-3.5 h-3.5 text-itpark-dark" />
+                            <span>{language === 'uz' ? course.durationUz : course.durationRu}</span>
+                          </div>
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 hover:text-itpark-dark transition-colors leading-tight">
+                          {language === 'uz' ? course.titleUz : course.titleRu}
+                        </h3>
+                      </div>
+
+                      {/* 3D Transparent Illustration */}
+                      <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 ml-4 transition-transform duration-500 group-hover:scale-108 group-hover:rotate-2">
+                        <img 
+                          src={course.image} 
+                          alt="" 
+                          className="w-full h-full object-contain filter drop-shadow-sm" 
+                        />
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-1.5 text-sm text-slate-700 font-semibold bg-white border border-slate-200/80 px-3 py-1.5 rounded-full shadow-xs">
-                      <Clock className="w-3.5 h-3.5 text-itpark-dark" />
-                      <span>{language === 'uz' ? course.durationUz : course.durationRu}</span>
+
+                    {/* Description */}
+                    <p className="text-slate-600 text-base leading-relaxed mb-5 mt-3">
+                      {language === 'uz' ? course.descUz : course.descRu}
+                    </p>
+                  </div>
+                ) : (
+                  // Normal Layout for other courses
+                  <div>
+                    {/* Header of card */}
+                    <div className="flex items-center justify-between mb-5">
+                      <div className={`w-12 h-12 border rounded-xl flex items-center justify-center transition-all duration-350 ${getIconWrapperStyles(course.category)}`}>
+                        {course.icon}
+                      </div>
+                      <div className="flex items-center space-x-1.5 text-sm text-slate-700 font-semibold bg-white border border-slate-200/80 px-3 py-1.5 rounded-full shadow-xs">
+                        <Clock className="w-3.5 h-3.5 text-itpark-dark" />
+                        <span>{language === 'uz' ? course.durationUz : course.durationRu}</span>
+                      </div>
                     </div>
+
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold text-slate-900 mb-3 hover:text-itpark-dark transition-colors">
+                      {language === 'uz' ? course.titleUz : course.titleRu}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-slate-600 text-base leading-relaxed mb-5">
+                      {language === 'uz' ? course.descUz : course.descRu}
+                    </p>
                   </div>
+                )}
 
-                  {/* Content */}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3 hover:text-itpark-dark transition-colors">
-                    {language === 'uz' ? course.titleUz : course.titleRu}
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed mb-5">
-                    {language === 'uz' ? course.descUz : course.descRu}
-                  </p>
-
-                  {/* Programs taught */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {course.programs.map((prog) => getProgramIcon(prog))}
-                  </div>
+                {/* Programs taught */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {course.programs.map((prog) => getProgramIcon(prog))}
                 </div>
+              </div>
 
-                {/* Action */}
-                <div className="border-t border-slate-200 pt-5 flex items-center justify-between mt-auto">
-                  <button
-                    onClick={() => onSelectCourse(course)}
-                    className="text-base font-bold text-itpark-dark hover:text-itpark transition-colors flex items-center space-x-1"
-                  >
-                    <span>{t.btnDetails}</span>
-                    <ArrowUpRight className="w-4 h-4" />
-                  </button>
-                  <a
-                    href="#contact"
-                    className="bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 text-sm font-bold px-4 py-2.5 rounded-lg transition-all"
-                  >
-                    {t.btnRegister}
-                  </a>
-                </div>
+              {/* Action */}
+              <div className="border-t border-slate-200 pt-5 flex items-center justify-between mt-auto">
+                <button
+                  onClick={() => onSelectCourse(course)}
+                  className="text-base font-bold text-itpark-dark hover:text-itpark transition-colors flex items-center space-x-1"
+                >
+                  <span>{t.btnDetails}</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </button>
+                <a
+                  href="#contact"
+                  className="bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 text-sm font-bold px-4 py-2.5 rounded-lg transition-all"
+                >
+                  {t.btnRegister}
+                </a>
               </div>
 
             </div>
