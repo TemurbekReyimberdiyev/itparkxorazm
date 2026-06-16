@@ -881,6 +881,35 @@ export default function Courses({ language, onSelectCourse, translations }) {
     }
   };
 
+  const getCourse3DImage = (courseId) => {
+    switch (courseId) {
+      case 'comp_lit':
+      case 'comp_lit_kids':
+        return '/images/courses/comp_lit.png';
+      case 'foundation':
+      case 'frontend':
+      case 'backend':
+        return '/images/courses/coding.png';
+      case 'video_edit':
+      case 'mobilography':
+      case 'design':
+      case '3d':
+        return '/images/courses/media.png';
+      case 'it_english_ielts':
+      case 'it_english_kids':
+      case 'foreign_languages':
+        return '/images/courses/languages.png';
+      case 'it_math':
+        return '/images/courses/math.png';
+      case 'robototexnika':
+        return '/images/courses/robot.png';
+      case 'smm':
+        return '/images/courses/smm.png';
+      default:
+        return '/images/courses/comp_lit.png';
+    }
+  };
+
   const filteredCourses = activeTab === 'all' 
     ? coursesData 
     : coursesData.filter(c => c.category === activeTab || (activeTab === 'languages' && c.category === 'basic'));
@@ -919,77 +948,81 @@ export default function Courses({ language, onSelectCourse, translations }) {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleCourses.map((course) => (
             <div
               key={course.id}
-              className="relative bg-white border border-slate-150 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col sm:flex-row overflow-hidden group min-h-[290px]"
+              className="relative bg-white border border-slate-150 rounded-[2rem] shadow-xs hover:shadow-lg hover:-translate-y-1.5 transition-all duration-500 flex flex-col overflow-hidden group h-[480px]"
             >
-              {/* Left Section - Slanted Colored Panel */}
+              {/* Top Section - Slanted Colored Panel */}
               <div 
-                className={`w-full sm:w-[32%] h-[160px] sm:h-auto relative overflow-hidden shrink-0 transition-all duration-500 ${getCategoryBackground(course.category)}`}
+                className={`h-[150px] relative overflow-hidden shrink-0 transition-all duration-500 ${getCategoryBackground(course.category)}`}
                 style={{
-                  clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)'
+                  clipPath: 'polygon(0 0, 100% 0, 100% 82%, 0 100%)'
                 }}
               >
-                {/* Decorative glows inside the left panel */}
+                {/* Decorative glows inside the top panel */}
                 <div className="absolute -top-10 -left-10 w-24 h-24 bg-white/10 rounded-full blur-xl pointer-events-none" />
                 <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-black/5 rounded-full blur-lg pointer-events-none" />
                 
-                {/* Visual gradient overlay */}
+                {/* Category Name on the Top Left */}
+                <div className="absolute top-5 left-6 z-10">
+                  <span className="bg-white/20 backdrop-blur-md text-white border border-white/20 text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
+                    {getCategoryLabel(course.category, language)}
+                  </span>
+                </div>
+
+                {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent opacity-40" />
               </div>
 
-              {/* Overlapping Popping Icon Badge */}
-              <div 
-                className={`absolute top-[160px] left-1/2 -translate-y-1/2 -translate-x-1/2 sm:top-1/2 sm:left-[32%] sm:-translate-y-1/2 sm:-translate-x-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10 transition-all duration-500 group-hover:scale-110 ${getCategoryIconBadge(course.category)}`}
-              >
-                {React.cloneElement(course.icon, { className: "w-7 h-7 sm:w-9 sm:h-9 text-white shrink-0" })}
+              {/* Overlapping 3D Illustration on the Right Edge of the Slant */}
+              <div className="absolute top-[105px] right-6 z-10 transition-transform duration-500 group-hover:scale-112 group-hover:-rotate-3">
+                <img 
+                  src={getCourse3DImage(course.id)} 
+                  alt={course.titleUz} 
+                  className="w-22 h-22 object-contain drop-shadow-xl select-none"
+                />
               </div>
 
-              {/* Right Section - Content */}
-              <div className="flex-1 p-6 sm:p-8 pt-10 sm:pt-8 sm:pl-16 flex flex-col justify-between">
+              {/* Bottom Section - Content */}
+              <div className="flex-1 p-6 flex flex-col justify-between">
                 <div>
-                  {/* Top Meta Details */}
-                  <div className="flex flex-wrap items-center gap-3 mb-4 text-xs font-bold">
-                    <span className={`px-3 py-1 rounded-full uppercase tracking-wider ${getCategoryBadgeStyles(course.category)}`}>
-                      {getCategoryLabel(course.category, language)}
-                    </span>
-                    <span className="flex items-center space-x-1.5 bg-slate-100 text-slate-600 px-3 py-1 rounded-full">
-                      <Clock className="w-3.5 h-3.5 text-slate-500" />
-                      <span>{language === 'uz' ? course.durationUz : course.durationRu}</span>
-                    </span>
+                  {/* Duration Badge */}
+                  <div className="flex items-center space-x-1.5 text-xs text-slate-500 font-bold mb-3">
+                    <Clock className="w-3.5 h-3.5 text-slate-400" />
+                    <span>{language === 'uz' ? course.durationUz : course.durationRu}</span>
                   </div>
 
                   {/* Title wrapped in «...» quotes */}
-                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3 group-hover:text-itpark-dark transition-colors leading-tight">
+                  <h3 className="text-xl font-extrabold text-slate-900 mb-2 group-hover:text-itpark-dark transition-colors leading-tight line-clamp-2 pr-12">
                     «{language === 'uz' ? course.titleUz : course.titleRu}»
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-5 max-w-xl line-clamp-3">
+                  <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-3">
                     {language === 'uz' ? course.descUz : course.descRu}
                   </p>
 
-                  {/* Tools Badge */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  {/* Tools badges */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {course.programs.map((prog) => getProgramIcon(prog))}
                   </div>
                 </div>
 
                 {/* Footer Actions */}
-                <div className="flex flex-row items-center justify-between gap-4 pt-5 border-t border-slate-100 mt-auto">
+                <div className="flex flex-row items-center justify-between gap-3 pt-4 border-t border-slate-100 mt-auto">
                   <button
                     onClick={() => onSelectCourse(course)}
-                    className={`px-4.5 py-2.5 rounded-full border font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 transition-all ${getDetailsBtnStyles(course.category)}`}
+                    className={`px-4 py-2.5 rounded-full border font-bold text-xs flex items-center justify-center space-x-1.5 transition-all ${getDetailsBtnStyles(course.category)}`}
                   >
                     <span>{t.btnDetails}</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </button>
 
                   <a
                     href="#contact"
-                    className="bg-slate-900 hover:bg-itpark hover:text-slate-950 text-white text-center text-xs sm:text-sm font-extrabold px-5 py-3 rounded-full transition-all shadow-md shadow-slate-900/10 hover:shadow-itpark/20"
+                    className="bg-slate-900 hover:bg-itpark hover:text-slate-950 text-white text-center text-xs font-extrabold px-4.5 py-2.5 rounded-full transition-all shadow-md shadow-slate-900/10 hover:shadow-itpark/20"
                   >
                     {t.btnRegister}
                   </a>
