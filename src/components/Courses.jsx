@@ -216,6 +216,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
       id: 'design',
       category: 'media',
       icon: <Palette className="w-6 h-6 text-current" />,
+      image: '/images/graphic_design.png',
       titleUz: 'Grafik dizayn',
       titleRu: 'Графический дизайн',
       durationUz: '3 oy',
