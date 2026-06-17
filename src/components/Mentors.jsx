@@ -66,7 +66,7 @@ export default function Mentors({ language, translations }) {
       image: '/dostonbek.webp'
     },
     {
-      name: 'Jonibek O\'ralov',
+      name: 'Jonibek Uralov',
       roleUz: 'Backend dasturlash mentori',
       roleRu: 'Ментор по Backend разработке',
       bioUz: 'Python tili, Django frameworki va relyatsion ma\'lumotlar bazalari yordamida veb-saytlarning server qismini yaratish bo\'yicha mutaxassis.',
@@ -74,7 +74,8 @@ export default function Mentors({ language, translations }) {
       skills: ['Python', 'Django', 'PostgreSQL', 'REST API', 'Git'],
       experienceUz: '5+ yil tajriba',
       experienceRu: 'Опыт 5+ лет',
-      avatarColor: 'from-rose-600 to-orange-500'
+      avatarColor: 'from-rose-600 to-orange-500',
+      image: '/jonibek.webp'
     },
     {
       name: 'Dilshodbek Rajabov',
