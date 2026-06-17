@@ -54,26 +54,30 @@ export default function Reviews({ language, translations }) {
     setProgress(0);
   }, [activeIndex]);
 
-  // Autoplay timer
+  // Autoplay and progress bar logic
   useEffect(() => {
     if (!isPlaying) return;
 
     const intervalTime = 50; // Update progress bar every 50ms
     const duration = 5000; // 5 seconds per story
-    const step = (intervalTime / duration) * 100;
+    
+    // Calculate initial elapsed time based on current progress (if we resumed from a pause)
+    let elapsed = (progress / 100) * duration;
 
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          setActiveIndex((curr) => (curr + 1) % reviewsData.length);
-          return 0;
-        }
-        return prev + step;
-      });
+      elapsed += intervalTime;
+      const currentProgress = Math.min((elapsed / duration) * 100, 100);
+      setProgress(currentProgress);
+
+      if (elapsed >= duration) {
+        clearInterval(timer);
+        setActiveIndex((curr) => (curr + 1) % reviewsData.length);
+        setProgress(0);
+      }
     }, intervalTime);
 
     return () => clearInterval(timer);
-  }, [isPlaying, reviewsData.length]);
+  }, [isPlaying, activeIndex, reviewsData.length]);
 
   const handlePrev = () => {
     setActiveIndex((curr) => (curr - 1 + reviewsData.length) % reviewsData.length);
