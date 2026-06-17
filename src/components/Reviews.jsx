@@ -18,13 +18,13 @@ export default function Reviews({ language, translations }) {
       image: '/images/student_1.webp'
     },
     {
-      name: 'Madina Sobirova',
+      name: 'Azizbek Davlatnazarov',
       courseUz: 'Grafik dizayn',
       courseRu: 'Графический дизайн',
       badgeUz: 'Frilanser dizayner',
       badgeRu: 'Дизайнер-фрилансер',
       textUz: 'Grafik dizayn kursi hayotimni o\'zgartirdi. Ranglar nazariyasi, branding va portfolio yaratishni noldan o\'rgandim. Kurs tugamasdanoq ilk buyurtmalarimni oldim.',
-      textRu: 'Курс графического дизайна изменил мою жизнь. Изучила теорию цвета, брендинг и создание портфолио с нуля. Получила первые заказы еще до окончания курса.',
+      textRu: 'Курс графического дизайна изменил мою жизнь. Изучил теорию цвета, брендинг и создание портфолио с нуля. Получил первые заказы еще до окончания курса.',
       image: '/images/student_2.webp'
     },
     {
