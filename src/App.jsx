@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Courses from './components/Courses';
+import Achievements from './components/Achievements';
 import CourseModal from './components/CourseModal';
 import Mentors from './components/Mentors';
 import ContactForm from './components/ContactForm';
@@ -36,6 +37,16 @@ const translations = {
       sectionSub: "Zamonaviy IT yo'nalishlaridan o'zingizga mosini tanlang va professional faoliyatingizni boshlang.",
       btnDetails: "Batafsil ma'lumot",
       btnRegister: "Ro'yxatdan o'tish"
+    },
+    achievements: {
+      sectionTitle: "Bizning",
+      sectionTitleColor: "yutuqlarimiz",
+      graduates: "Bitiruvchilar",
+      certificates: "Xalqaro sertifikat egalari",
+      employment: "Ishga joylashish ko'rsatkichi",
+      ranking: "IT Park rezidenti ta'lim markazlari reytingi",
+      note: "IT Park rezidenti bo'lgan ta'lim markazlari orasida IT Park Xorazm 2026-yil iyun holatiga ko'ra Raqamli ta’limni rivojlantirish markazi reytingida TOP-5 talikka kiritilgan. 🤩",
+      source: "Raqamli ta’limni rivojlantirish markazi reytingi e'loni"
     },
     mentors: {
       sectionTitle: "Bizning",
@@ -99,6 +110,16 @@ const translations = {
       sectionSub: "Выберите подходящее вам современное IT-направление и начните свою профессиональную деятельность.",
       btnDetails: "Подробнее",
       btnRegister: "Регистрация"
+    },
+    achievements: {
+      sectionTitle: "Наши",
+      sectionTitleColor: "достижения",
+      graduates: "Выпускников",
+      certificates: "Обладателей международных сертификатов",
+      employment: "Показатель трудоустройства",
+      ranking: "Рейтинг учебных центров-резидентов IT Park",
+      note: "Среди учебных центров-резидентов IT Park филиал IT Park Xorazm по состоянию на июнь 2026 года вошел в ТОП-5 рейтинга Центра развития цифрового образования. 🤩",
+      source: "Объявление рейтинга Центра развития цифрового образования"
     },
     mentors: {
       sectionTitle: "Наши",
@@ -182,6 +203,12 @@ function App() {
         <Courses 
           language={language} 
           onSelectCourse={handleSelectCourse} 
+          translations={translations} 
+        />
+
+        {/* Achievements Section */}
+        <Achievements 
+          language={language} 
           translations={translations} 
         />
 
