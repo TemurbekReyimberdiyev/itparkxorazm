@@ -26,7 +26,8 @@ export default function Mentors({ language, translations }) {
       skills: ['C programming', 'Algorithms', 'Data Structures', 'Git', 'Problem Solving'],
       experienceUz: '4+ yil tajriba',
       experienceRu: 'Опыт 4+ года',
-      avatarColor: 'from-emerald-600 to-teal-500'
+      avatarColor: 'from-emerald-600 to-teal-500',
+      image: '/izzatbek.webp'
     },
     {
       name: 'Humoyun Madrahimov',
