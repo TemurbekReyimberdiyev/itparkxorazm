@@ -61,8 +61,8 @@ export default function Mentors({ language, translations }) {
       bioUz: 'Adobe Premiere Pro va After Effects dasturlari orqali professional video tahrirlash, dinamik montaj va rang berish sirlari mentori.',
       bioRu: 'Ментор по профессиональному редактированию видео, динамическому монтажу и цветокоррекции в Adobe Premiere Pro и After Effects.',
       skills: ['Premiere Pro', 'After Effects', 'Video Editing', 'Color Grading', 'Sound Design'],
-      experienceUz: '4+ yil tajriba',
-      experienceRu: 'Опыт 4+ года',
+      experienceUz: '15+ yil tajriba',
+      experienceRu: 'Опыт 15+ лет',
       avatarColor: 'from-orange-500 to-amber-500',
       image: '/dostonbek.webp'
     },

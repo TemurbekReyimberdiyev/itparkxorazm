@@ -40,7 +40,7 @@ const translations = {
     mentors: {
       sectionTitle: "Bizning",
       sectionTitleColor: "mentorlarimiz",
-      sectionSub: "Sizga sohadagi 3 yildan 5 yilgacha tajribaga ega bo'lgan va real loyihalarda ishlaydigan mutaxassislar dars beradi."
+      sectionSub: "Sizga sohadagi 3 yildan ortiq tajribaga ega bo'lgan va real loyihalarda ishlaydigan mutaxassislar dars beradi."
     },
     contact: {
       title: "Kursga yozilish uchun so'rov qoldiring",
@@ -103,7 +103,7 @@ const translations = {
     mentors: {
       sectionTitle: "Наши",
       sectionTitleColor: "менторы",
-      sectionSub: "Вас будут обучать специалисты с практическим опытом работы от 3 до 5 лет, участвующие в реальных проектах."
+      sectionSub: "Вас будут обучать специалисты с практическим опытом работы более 3 лет, участвующие в реальных проектах."
     },
     contact: {
       title: "Оставьте заявку на обучение",
