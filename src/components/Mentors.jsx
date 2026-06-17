@@ -15,7 +15,8 @@ export default function Mentors({ language, translations }) {
       experienceUz: '3+ yil tajriba',
       experienceRu: 'Опыт 3+ года',
       avatarColor: 'from-blue-600 to-cyan-500',
-      image: '/temurbek.webp'
+      image: '/temurbek.webp',
+      objectPosition: 'object-[center_15%]'
     },
     {
       name: 'Izzatbek Mahmudjonov',
@@ -192,7 +193,7 @@ export default function Mentors({ language, translations }) {
                     <img 
                       src={mentor.image} 
                       alt={mentor.name} 
-                      className="w-full h-full object-cover object-[center_38%] transition-transform duration-300 group-hover:scale-105"
+                      className={`w-full h-full object-cover ${mentor.objectPosition || 'object-[center_38%]'} transition-transform duration-300 group-hover:scale-105`}
                     />
                   ) : (
                     <>
