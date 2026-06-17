@@ -128,7 +128,7 @@ export default function ContactForm({ language, selectedCourse, translations }) 
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder={language === 'uz' ? 'Masalan: Sherzod' : 'Например: Шерзод'}
+                      placeholder={language === 'uz' ? 'Masalan: Abdulloh' : 'Например: Абдуллоҳ'}
                       className="w-full bg-white border border-slate-200 focus:border-itpark/60 focus:ring-1 focus:ring-itpark/30 rounded-xl px-4 py-3.5 text-sm text-slate-800 placeholder-slate-400 outline-none transition-all"
                     />
                   </div>
