@@ -91,7 +91,7 @@ export default function Achievements({ language, translations }) {
           </div>
           <div className="shrink-0">
             <a
-              href="https://t.me/edu_digital_uz"
+              href="https://t.me/digitaledu_uz/3239"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-white hover:bg-slate-100 text-slate-700 hover:text-slate-900 text-sm font-bold border border-slate-200 px-5 py-3 rounded-xl shadow-xs transition-all"
