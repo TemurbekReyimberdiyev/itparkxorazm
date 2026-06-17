@@ -831,18 +831,7 @@ export default function Courses({ language, onSelectCourse, translations }) {
   };
 
   const getIconWrapperStyles = (category) => {
-    switch (category) {
-      case 'basic':
-        return 'bg-blue-500/10 border-blue-500/20 text-blue-600';
-      case 'dev':
-        return 'bg-[#7dba28]/15 border-[#7dba28]/25 text-itpark-dark';
-      case 'media':
-        return 'bg-purple-500/10 border-purple-500/20 text-purple-600';
-      case 'languages':
-        return 'bg-amber-500/10 border-amber-500/20 text-amber-600';
-      default:
-        return 'bg-white border-slate-200 text-slate-700';
-    }
+    return 'bg-[#7dba28]/15 border-[#7dba28]/25 text-itpark-dark';
   };
 
   const filteredCourses = activeTab === 'all' 
