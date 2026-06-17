@@ -42,7 +42,7 @@ export default function Mentors({ language, translations }) {
       image: '/humoyun.webp'
     },
     {
-      name: 'Shohruh Rustamov',
+      name: 'Shohrux Abdullayev',
       roleUz: 'Frontend dasturlash mentori',
       roleRu: 'Ментор по Frontend разработке',
       bioUz: 'Zamonaviy veb-dasturlash (HTML, CSS, JavaScript, React) asoslarini amaliy loyihalar bilan o\'rgatuvchi frontend dasturchi.',
@@ -50,7 +50,8 @@ export default function Mentors({ language, translations }) {
       skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Tailwind CSS'],
       experienceUz: '3+ yil tajriba',
       experienceRu: 'Опыт 3+ года',
-      avatarColor: 'from-amber-500 to-rose-500'
+      avatarColor: 'from-amber-500 to-rose-500',
+      image: '/shohrux.webp'
     },
     {
       name: 'Dostobek Jumayev',
