@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, Quote, MessageSquare } from 'lucide-react';
 export default function Reviews({ language, translations }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const reviewsData = [
     {
@@ -56,7 +56,7 @@ export default function Reviews({ language, translations }) {
 
   // Autoplay timer
   useEffect(() => {
-    if (isHovered) return;
+    if (!isPlaying) return;
 
     const intervalTime = 50; // Update progress bar every 50ms
     const duration = 5000; // 5 seconds per story
@@ -73,14 +73,16 @@ export default function Reviews({ language, translations }) {
     }, intervalTime);
 
     return () => clearInterval(timer);
-  }, [isHovered, reviewsData.length]);
+  }, [isPlaying, reviewsData.length]);
 
   const handlePrev = () => {
     setActiveIndex((curr) => (curr - 1 + reviewsData.length) % reviewsData.length);
+    setIsPlaying(true);
   };
 
   const handleNext = () => {
     setActiveIndex((curr) => (curr + 1) % reviewsData.length);
+    setIsPlaying(true);
   };
 
   return (
@@ -136,11 +138,7 @@ export default function Reviews({ language, translations }) {
       </div>
 
       {/* Stories Carousel Container */}
-      <div 
-        className="w-full relative overflow-hidden py-10"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className="w-full relative overflow-hidden py-10">
         {/* Slider viewport */}
         <div className="relative w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[680px] overflow-visible">
           
@@ -173,6 +171,9 @@ export default function Reviews({ language, translations }) {
                   onClick={() => {
                     if (!isActive) {
                       setActiveIndex(idx);
+                      setIsPlaying(true);
+                    } else {
+                      setIsPlaying(!isPlaying);
                     }
                   }}
                 >
@@ -182,6 +183,17 @@ export default function Reviews({ language, translations }) {
                     alt={review.name} 
                     className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
                   />
+
+                  {/* Play overlay when paused */}
+                  {isActive && !isPlaying && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 z-20 transition-all duration-300">
+                      <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-xs border border-white/30 flex items-center justify-center animate-pulse">
+                        <svg className="w-8 h-8 text-white fill-white ml-1" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Top Progress Bars (Only animated inside active card) */}
                   {isActive && (
