@@ -16,7 +16,7 @@ export default function Mentors({ language, translations }) {
       experienceRu: 'Опыт 3+ года',
       avatarColor: 'from-blue-600 to-cyan-500',
       image: '/temurbek.webp',
-      objectPosition: 'object-[center_15%]'
+      objectPosition: 'object-[center_58%]'
     },
     {
       name: 'Izzatbek Mahmudjonov',
