@@ -86,7 +86,8 @@ export default function Mentors({ language, translations }) {
       skills: ['IELTS Preparation', 'English Grammar', 'Speaking Practice', 'Academic Writing'],
       experienceUz: '5+ yil tajriba',
       experienceRu: 'Опыт 5+ лет',
-      avatarColor: 'from-blue-500 to-indigo-600'
+      avatarColor: 'from-blue-500 to-indigo-600',
+      image: '/dilshodbek.webp'
     }
   ];
 
