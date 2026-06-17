@@ -37,7 +37,8 @@ export default function Mentors({ language, translations }) {
       skills: ['Photoshop', 'Illustrator', 'Graphic Design', 'Branding', 'Vector Art'],
       experienceUz: '3+ yil tajriba',
       experienceRu: 'Опыт 3+ года',
-      avatarColor: 'from-purple-650 to-indigo-500'
+      avatarColor: 'from-purple-650 to-indigo-500',
+      image: '/humoyun.webp'
     },
     {
       name: 'Shohruh Rustamov',
