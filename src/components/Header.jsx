@@ -20,7 +20,14 @@ export default function Header({ language, setLanguage, translations }) {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
-          <a href="#" className="flex items-center group">
+          <a 
+            href="/" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/';
+            }} 
+            className="flex items-center group"
+          >
             <img 
               src="/logo.png" 
               alt="IT Park Khorezm Logo" 
