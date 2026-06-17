@@ -54,7 +54,7 @@ export default function Mentors({ language, translations }) {
       image: '/shohrux.webp'
     },
     {
-      name: 'Dostobek Jumayev',
+      name: 'Dostonbek Jumayev',
       roleUz: 'Video montaj mentori',
       roleRu: 'Ментор по видеомонтажу',
       bioUz: 'Adobe Premiere Pro va After Effects dasturlari orqali professional video tahrirlash, dinamik montaj va rang berish sirlari mentori.',
@@ -62,7 +62,8 @@ export default function Mentors({ language, translations }) {
       skills: ['Premiere Pro', 'After Effects', 'Video Editing', 'Color Grading', 'Sound Design'],
       experienceUz: '4+ yil tajriba',
       experienceRu: 'Опыт 4+ года',
-      avatarColor: 'from-orange-500 to-amber-500'
+      avatarColor: 'from-orange-500 to-amber-500',
+      image: '/dostonbek.webp'
     },
     {
       name: 'Jonibek O\'ralov',
