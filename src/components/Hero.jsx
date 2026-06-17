@@ -74,7 +74,7 @@ export default function Hero({ language, translations }) {
               
               {/* Background Building Image */}
               <img 
-                src="/itpark-building.jpg" 
+                src="/itpark-building.webp" 
                 alt="IT Park Xorazm Building" 
                 className="absolute inset-0 w-full h-full object-cover opacity-95 transition-transform duration-700 group-hover:scale-105"
               />
