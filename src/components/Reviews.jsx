@@ -28,13 +28,13 @@ export default function Reviews({ language, translations }) {
       image: '/images/student_2.webp'
     },
     {
-      name: 'Jasur Mansurov',
-      courseUz: 'Video montaj',
-      courseRu: 'Видеомонтаж',
-      badgeUz: 'YouTube va Reels montajchisi',
-      badgeRu: 'Монтажер YouTube и Reels',
-      textUz: 'Professional darajada video montaj sirlarini o\'rganishni maqsad qilgandim va buni IT Park Xorazmda topdim. Premiere Pro va After Effects darslari juda tushunarli bo\'ldi.',
-      textRu: 'Я хотел научиться профессиональному видеомонтажу и нашел это в IT Park Хорезм. Уроки по Premiere Pro и After Effects были очень понятными.',
+      name: 'Munisa Valiyeva',
+      courseUz: 'Mobilografiya',
+      courseRu: 'Мобилография',
+      badgeUz: 'Mobilografiya bitiruvchisi',
+      badgeRu: 'Выпускница мобилографии',
+      textUz: 'Mobilografiya kursida telefon orqali professional videolar olish va montaj qilishni o\'rgandim. Darslardagi amaliy mashg\'ulotlar menga o\'z portfolioyimni yaratishda yordam berdi.',
+      textRu: 'На курсе мобилографии я научилась снимать и монтировать профессиональные видео на телефон. Практические занятия помогли мне создать собственное портфолио.',
       image: '/images/student_3.webp'
     },
     {
