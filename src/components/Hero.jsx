@@ -99,13 +99,25 @@ export default function Hero({ language, translations }) {
           {stats.map((item, idx) => (
             <div
               key={idx}
-              className="glass-card rounded-2xl p-5 sm:p-6 text-center flex flex-col items-center"
+              className="group relative bg-[#F0F2F5]/80 hover:bg-white border border-slate-200/50 hover:border-itpark/30 rounded-3xl p-6 text-center flex flex-col items-center shadow-xs transition-all duration-350 ease-out hover:shadow-xl hover:shadow-itpark/5 hover:-translate-y-1.5"
             >
-              <div className="w-10 h-10 bg-white border border-slate-200 rounded-xl flex items-center justify-center mb-3">
+              {/* Subtle hover background accent glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-itpark/3 via-transparent to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-350 pointer-events-none"></div>
+
+              {/* Icon Container with custom badge style */}
+              <div className="w-12 h-12 bg-white border border-slate-200 rounded-2xl flex items-center justify-center mb-4 shadow-sm transition-all duration-350 ease-out group-hover:scale-110 group-hover:rotate-3 group-hover:border-itpark/20 group-hover:shadow-md">
                 {item.icon}
               </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">{item.num}</div>
-              <div className="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">{item.label}</div>
+
+              {/* Big bold number */}
+              <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight transition-transform duration-300 group-hover:scale-[1.02]">
+                {item.num}
+              </div>
+
+              {/* Modern uppercase typography label */}
+              <div className="text-[11px] sm:text-xs text-slate-500 mt-2 uppercase tracking-widest font-bold leading-relaxed max-w-[160px] group-hover:text-slate-800 transition-colors duration-350">
+                {item.label}
+              </div>
             </div>
           ))}
         </div>
