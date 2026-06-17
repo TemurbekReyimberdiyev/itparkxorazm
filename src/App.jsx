@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Courses from './components/Courses';
 import Achievements from './components/Achievements';
+import Reviews from './components/Reviews';
 import CourseModal from './components/CourseModal';
 import Mentors from './components/Mentors';
 import ContactForm from './components/ContactForm';
@@ -208,6 +209,12 @@ function App() {
 
         {/* Achievements Section */}
         <Achievements 
+          language={language} 
+          translations={translations} 
+        />
+
+        {/* Reviews Section */}
+        <Reviews 
           language={language} 
           translations={translations} 
         />
