@@ -8,13 +8,13 @@ export default function Reviews({ language, translations }) {
 
   const reviewsData = [
     {
-      name: 'Abdulloh Anvarov',
+      name: 'Akmalbek Shokirov',
       courseUz: 'Frontend dasturlash',
       courseRu: 'Frontend разработка',
       badgeUz: 'Junior Frontend dasturchi',
       badgeRu: 'Junior Frontend разработчик',
-      textUz: 'IT Park Xorazmda Frontend kursini tugatdim. Mentorlar juda tajribali, har bir dars amaliyot bilan o\'tildi. Hozirda mahalliy studiyada junior dasturchi bo\'lib ishlayapman!',
-      textRu: 'Окончил курс Frontend в IT Park Хорезм. Менторы очень опытные, каждый урок проходил с практикой. Сейчас работаю junior-разработчиком в местной студии!',
+      textUz: 'IT Park Xorazmda Frontend kursini tugatdim. Mentorlar juda tajribali, har bir dars amaliyot bilan o\'tildi. Hozirda mahalliy kompaniyada junior dasturchi bo\'lib ishlayapman!',
+      textRu: 'Окончил курс Frontend в IT Park Хорезм. Менторы очень опытные, каждый урок проходил с практикой. Сейчас работаю junior-разработчиком в местной компании!',
       image: '/images/student_1.webp'
     },
     {
