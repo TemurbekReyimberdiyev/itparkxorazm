@@ -38,13 +38,13 @@ export default function Reviews({ language, translations }) {
       image: '/images/student_3.webp'
     },
     {
-      name: 'Dilnoza Tojiyeva',
+      name: "Mirjalol Xo'jayov",
       courseUz: 'Ingliz tili & IELTS',
       courseRu: 'Английский язык & IELTS',
-      badgeUz: 'IELTS 7.5 sohibasi',
-      badgeRu: 'Обладательница IELTS 7.5',
-      textUz: 'IELTS imtihoniga tayyorgarlik ko\'rish uchun eng to\'g\'ri joy. Mentorlarning yordami va doimiy speaking darslari tufayli IELTSdan 7.5 ball olishga muvaffaq bo\'ldim!',
-      textRu: 'Лучшее место для подготовки к экзамену IELTS. Благодаря поддержке менторов и постоянным урокам спикинга мне удалось получить 7.5 баллов по IELTS!',
+      badgeUz: 'IELTS 6.0 sohibi',
+      badgeRu: 'Обладатель IELTS 6.0',
+      textUz: 'IELTS imtihoniga tayyorgarlik ko\'rish uchun eng to\'g\'ri joy. Mentorlarning yordami va doimiy speaking darslari tufayli IELTSdan 6.0 ball olishga muvaffaq bo\'ldim!',
+      textRu: 'Лучшее место для подготовки к экзамену IELTS. Благодаря поддержке менторов и постоянным урокам спикинга мне удалось получить 6.0 баллов по IELTS!',
       image: '/images/student_4.webp'
     }
   ];
