@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://temurbekreyimberdiyev.github.io/itparkxorazm/sitemap.xml
