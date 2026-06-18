@@ -14,7 +14,7 @@ export default function Footer({ language, translations }) {
             <div className="flex items-center mb-4">
               <img 
                 src="/logo.png" 
-                alt="IT Park Khorezm Logo" 
+                alt="IT Park Xorazm Logo (itparkxorazm)" 
                 className="h-10 w-auto object-contain"
               />
             </div>

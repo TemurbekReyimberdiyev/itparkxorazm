@@ -30,7 +30,7 @@ export default function Header({ language, setLanguage, translations }) {
           >
             <img 
               src="/logo.png" 
-              alt="IT Park Khorezm Logo" 
+              alt="IT Park Xorazm Logo (itparkxorazm)" 
               className="h-10 sm:h-12 w-auto object-contain group-hover:scale-[1.02] transition-transform duration-300"
             />
           </a>
