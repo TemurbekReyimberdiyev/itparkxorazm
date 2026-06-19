@@ -139,7 +139,7 @@ export default function Mentors({ language, translations }) {
     <section id="mentors" className="py-20 bg-white relative overflow-hidden">
       
       {/* Glow Effects */}
-      <div className="absolute bottom-10 left-10 w-[250px] h-[250px] bg-itpark/5 rounded-full blur-[70px] pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[15.625rem] h-[15.625rem] bg-itpark/5 rounded-full blur-[4.375rem] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -252,7 +252,7 @@ export default function Mentors({ language, translations }) {
                     </svg>
                   </a>
                   <div className="w-1.5 h-1.5 bg-slate-200 rounded-full" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 flex items-center space-x-1">
+                  <span className="text-[0.625rem] font-bold uppercase tracking-wider text-slate-500 flex items-center space-x-1">
                     <Code2 className="w-3.5 h-3.5 text-itpark-dark" />
                     <span>Mentor</span>
                   </span>

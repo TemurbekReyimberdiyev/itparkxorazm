@@ -8,7 +8,7 @@ export default function About({ language, translations }) {
     <section id="about" className="py-20 bg-white relative">
       
       {/* Decorative Glow */}
-      <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[350px] h-[350px] bg-itpark/5 rounded-full blur-[90px] pointer-events-none" />
+      <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[21.875rem] h-[21.875rem] bg-itpark/5 rounded-full blur-[5.625rem] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -119,7 +119,7 @@ export default function About({ language, translations }) {
 
           {/* Map Frame */}
           <div className="lg:col-span-7">
-            <div className="relative w-full h-[400px] bg-slate-100 border border-slate-200 rounded-3xl overflow-hidden shadow-xl">
+            <div className="relative w-full h-[25rem] bg-slate-100 border border-slate-200 rounded-3xl overflow-hidden shadow-xl">
               
               {/* Google Maps Embed pointing directly to Pahlavon Mahmud 6, Urgench */}
               <iframe

@@ -39,8 +39,8 @@ export default function Achievements({ language, translations }) {
     <section id="achievements" className="py-20 bg-white relative overflow-hidden">
       
       {/* Background glow decorator */}
-      <div className="absolute top-1/4 right-0 w-[300px] h-[300px] bg-itpark/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[18.75rem] h-[18.75rem] bg-itpark/5 rounded-full blur-[6.25rem] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-[18.75rem] h-[18.75rem] bg-blue-500/5 rounded-full blur-[6.25rem] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

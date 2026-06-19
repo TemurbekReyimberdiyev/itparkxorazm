@@ -93,31 +93,31 @@ export default function Reviews({ language, translations }) {
     <section id="reviews" className="py-20 bg-slate-50 relative overflow-hidden border-b border-slate-200">
       
       {/* Background decoration elements */}
-      <div className="absolute top-1/4 left-10 w-[280px] h-[280px] bg-itpark/5 rounded-full blur-[80px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[280px] h-[280px] bg-blue-500/5 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute top-1/4 left-10 w-[17.5rem] h-[17.5rem] bg-itpark/5 rounded-full blur-[5rem] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[17.5rem] h-[17.5rem] bg-blue-500/5 rounded-full blur-[5rem] pointer-events-none" />
 
       {/* Tailwind CSS Responsive variables defined locally for carousel sizing */}
       <style dangerouslySetInnerHTML={{__html: `
         :root {
-          --card-width: 280px;
-          --card-gap: 16px;
+          --card-width: 17.5rem;
+          --card-gap: 1rem;
         }
         @media (min-width: 640px) {
           :root {
-            --card-width: 330px;
-            --card-gap: 20px;
+            --card-width: 20.625rem;
+            --card-gap: 1.25rem;
           }
         }
         @media (min-width: 768px) {
           :root {
-            --card-width: 360px;
-            --card-gap: 24px;
+            --card-width: 22.5rem;
+            --card-gap: 1.5rem;
           }
         }
         @media (min-width: 1024px) {
           :root {
-            --card-width: 380px;
-            --card-gap: 28px;
+            --card-width: 23.75rem;
+            --card-gap: 1.75rem;
           }
         }
       `}} />
@@ -144,7 +144,7 @@ export default function Reviews({ language, translations }) {
       {/* Stories Carousel Container */}
       <div className="w-full relative overflow-hidden py-10">
         {/* Slider viewport */}
-        <div className="relative w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[680px] overflow-visible">
+        <div className="relative w-full h-[31.25rem] sm:h-[37.5rem] md:h-[40.625rem] lg:h-[42.5rem] overflow-visible">
           
           {/* Flex Track */}
           <div 
@@ -159,7 +159,7 @@ export default function Reviews({ language, translations }) {
               const isPrev = idx === (activeIndex - 1 + reviewsData.length) % reviewsData.length;
               const isNext = idx === (activeIndex + 1) % reviewsData.length;
 
-              let cardClasses = "relative aspect-[9/16] rounded-[24px] overflow-hidden bg-slate-800 shadow-lg transition-all duration-500 ease-out ";
+              let cardClasses = "relative aspect-[9/16] rounded-3xl overflow-hidden bg-slate-800 shadow-lg transition-all duration-500 ease-out ";
               
               if (isActive) {
                 cardClasses += "w-[var(--card-width)] scale-100 z-20 opacity-100 blur-none grayscale-0 ring-4 ring-itpark/30";
@@ -232,7 +232,7 @@ export default function Reviews({ language, translations }) {
                     </div>
 
                     {/* Badge */}
-                    <div className="mb-2 self-start bg-itpark/95 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider shadow-xs">
+                    <div className="mb-2 self-start bg-itpark/95 text-slate-950 text-[0.625rem] font-extrabold uppercase px-2.5 py-1 rounded-md tracking-wider shadow-xs">
                       {language === 'uz' ? review.badgeUz : review.badgeRu}
                     </div>
 

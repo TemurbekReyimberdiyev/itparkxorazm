@@ -7,6 +7,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Proportional layout scaling on large displays (desktop, 24" and 27" monitors) */
+@media (min-width: 1600px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 17.6px; /* Scales layout to 110% */
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 19.2px; /* Scales layout to 120% for 2K/4K displays */
+  }
+}
+
 body {
   font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
   @apply bg-slate-50 text-slate-900 overflow-x-hidden;

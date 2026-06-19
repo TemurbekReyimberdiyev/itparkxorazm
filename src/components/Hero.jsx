@@ -15,8 +15,8 @@ export default function Hero({ language, translations }) {
     <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-white">
       
       {/* Decorative Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-itpark/5 rounded-full blur-[120px] pointer-events-none z-0" />
-      <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-itpark/5 rounded-full blur-[80px] pointer-events-none z-0" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[31.25rem] h-[31.25rem] bg-itpark/5 rounded-full blur-[7.5rem] pointer-events-none z-0" />
+      <div className="absolute top-10 right-10 w-[18.75rem] h-[18.75rem] bg-itpark/5 rounded-full blur-[5rem] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -70,7 +70,7 @@ export default function Hero({ language, translations }) {
 
           {/* Graphical/Image Section */}
           <div className="lg:col-span-5 relative flex justify-center w-full">
-            <div className="relative w-full max-w-lg h-[400px] rounded-3xl overflow-hidden border border-slate-200/80 shadow-xl flex items-center justify-center bg-slate-100 group">
+            <div className="relative w-full max-w-lg h-[25rem] rounded-3xl overflow-hidden border border-slate-200/80 shadow-xl flex items-center justify-center bg-slate-100 group">
               
               {/* Background Building Image */}
               <img 
@@ -86,7 +86,7 @@ export default function Hero({ language, translations }) {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="text-[10px] uppercase tracking-wider text-slate-700 font-bold">Active</span>
+                <span className="text-[0.625rem] uppercase tracking-wider text-slate-700 font-bold">Active</span>
               </div>
 
             </div>
@@ -115,7 +115,7 @@ export default function Hero({ language, translations }) {
               </div>
 
               {/* Modern uppercase typography label */}
-              <div className="text-[11px] sm:text-xs text-slate-500 mt-2 uppercase tracking-widest font-bold leading-relaxed max-w-[160px] group-hover:text-slate-800 transition-colors duration-350">
+              <div className="text-[0.6875rem] sm:text-xs text-slate-500 mt-2 uppercase tracking-widest font-bold leading-relaxed max-w-[10rem] group-hover:text-slate-800 transition-colors duration-350">
                 {item.label}
               </div>
             </div>

@@ -209,7 +209,7 @@ export default function ContactForm({ language, selectedCourse, translations }) 
                   )}
                 </button>
 
-                <p className="text-[10px] text-slate-500 text-center leading-relaxed mt-4">
+                <p className="text-[0.625rem] text-slate-500 text-center leading-relaxed mt-4">
                   {language === 'uz' 
                     ? "Tugmani bosish orqali Siz oferta shartlariga va shaxsiy ma'lumotlarni qayta ishlashga rozilik berasiz."
                     : "Нажимая на кнопку, Вы соглашаетесь с условиями оферты и обработкой персональных данных."}
